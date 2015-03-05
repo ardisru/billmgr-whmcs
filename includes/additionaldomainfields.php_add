@@ -1,0 +1,442 @@
+<?php
+/*
+--------------------------------------------------------------------
+              ///  WHMCS DOMAIN ADDITIONAL FIELDS  \\\
+--------------------------------------------------------------------
+
+This is where you can define the TLD specific fields required to
+register certain TLDs. Supported variables are:
+
+  Name - key name used to reference field in modules (required)
+  DisplayName - name displayed in client & admin interfaces
+  LangVar - the language file variable to use if set
+  Type - field type: text, dropdown, radio, tickbox (required)
+  Size - the length of the text field
+  Default - the default value the field should take
+  Required - force entry - true/false
+
+--------------------------------------------------------------------
+*/
+
+## Добавить в конец файла additionaldomainfields.php ###
+## RU & SU DOMAINS REQUIREMENTS ##
+
+$additionaldomainfields[".ru"][] = array(
+"Name" => "-------",
+"DisplayName" => "",
+"Description" => "<b>Данные регистратора доменного имени</b>",
+"Type" => "",
+"Size" => "0",
+"Default" => "",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"Name" => "dogovor",
+"DisplayName" => "<b>Договор c регистратором</b>",
+"Description" => "если имеется",
+"LangVar" => "dogovor",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"Name" => "domenid",
+"DisplayName" => "",
+"Description" => "",
+"LangVar" => "domenid",
+"Type" => "",
+"Size" => "0",
+"Default" => "",
+"Required" => false,
+);
+
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Регистрировать домен на",
+"LangVar" => "reg_to",
+"Name" => "reg_to",
+"Type" => "dropdown",
+"Options" => "Частное лицо(Physical person),Организацию(Organization)",
+"Required" => true,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Телефон",
+"Description" => "Пример: +7 095 8102233",
+"LangVar" => "Phone",
+
+"Name" => "Phone",
+"Type" => "text",
+"Size" => "20",
+"Default" => "",
+"Required" => true,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Моб. телефон",
+"Description" => "Пример: +7 095 8102233",
+"LangVar" => "CellPhone",
+
+"Name" => "CellPhone",
+"Type" => "text",
+"Size" => "20",
+"Default" => "",
+"Required" => true,
+);
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Факс",
+"Description" => "Пример: +7 095 8102233",
+"LangVar" => "Fax",
+
+"Name" => "Fax",
+"Type" => "text",
+"Size" => "20",
+"Default" => "",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Email",
+"Description" => "Пример: xxx@london.ru",
+"LangVar" => "Email",
+
+"Name" => "Email",
+"Type" => "text",
+"Size" => "20",
+"Default" => "",
+"Required" => false,
+);
+
+
+
+
+$additionaldomainfields[".ru"][] = array(
+"Name" => "физ.лицо",
+"DisplayName" => "",
+"Description" => "<b>Заполните для регистрации домена на частное лицо</b>",
+"Type" => "",
+"Size" => "0",
+"Default" => "",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Использовать Private person ?",
+"LangVar" => "private_person",
+"Name" => "private_person",
+"Type" => "dropdown",
+"Options" => "no,yes",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Фамилия",
+"Description" => "Пример: Сидоров",
+"LangVar" => "Sourname",
+
+"Name" => "Sourname",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Имя",
+"Description" => "Пример: Иван",
+"LangVar" => "Name",
+
+"Name" => "Name",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Отчество",
+"Description" => "Пример: Сидорович",
+"LangVar" => "Lastname",
+
+"Name" => "Lastname",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Адрес",
+"Description" => "Пример: ул.Кошкина, д.15, кв.4",
+"LangVar" => "pAddress",
+
+"Name" => "pAddress",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Город",
+"Description" => "Пример: г.Москва",
+"LangVar" => "pCity",
+
+"Name" => "pCity",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Почтовый индекс",
+"Description" => "Пример: 123456",
+"LangVar" => "pIndex",
+
+"Name" => "pIndex",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Регион/область/край/республика",
+"Description" => "Пример: Московская область",
+"LangVar" => "pState",
+
+"Name" => "pState",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => false,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Кому",
+"Description" => "Пример: Сидорову В.А.",
+"LangVar" => "pRecipient",
+
+"Name" => "pRecipient",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => false,
+);
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Серия паспорта",
+"Description" => "Пример: 3102",
+"LangVar" => "PasportLine",
+
+"Name" => "PasportLine",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Номер паспорта",
+"Description" => "Пример: 651241",
+"LangVar" => "PasportNum",
+
+"Name" => "PasportNum",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Кем и когда выдан паспорт",
+"Description" => "Пример: выдан 48 о/м г.Москвы 26.12.1990",
+"LangVar" => "PasportWhom",
+
+"Name" => "PasportWhom",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Дата выдачи паспорта",
+"Description" => "Пример: 07.11.1917",
+"LangVar" => "PasportDate",
+
+"Name" =>"PasportDate",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Дата рождения",
+"Description" => "Пример: 07.11.1917",
+"LangVar" => "birth_date",
+
+"Name" =>"birth_date",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+
+
+$additionaldomainfields[".ru"][] = array(
+"Name" => "юр.лицо",
+"DisplayName" => "",
+"Description" => "<b>Заполните для регистрации домена на юридическое лицо</b>",
+"Type" => "",
+"Size" => "0",
+"Default" => "",
+"Required" => false,
+);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Полное название организации на русском.",
+"Description" => "Закрытое Акционерное Общество Новое время",
+"LangVar" => "org_r",
+
+	"Name" =>"org_r",
+	"Type" => "text",
+	"Size" => "30",
+	"Default" => "",
+	"Required" => false,
+	);
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "ИНН",
+"Description" => "Пример: 7701107259",
+"LangVar" => "inn",
+
+"Name" => "inn",
+"Type" => "text",
+"Size" => "30",
+"Default" => "",
+"Required" => false,
+);
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "КПП организации (для Российских организаций).",
+"Description" => "632946014",
+"LangVar" => "kpp",
+
+	"Name" =>"kpp",
+	"Type" => "text",
+	"Size" => "30",
+	"Default" => "",
+	"Required" => false,
+	);
+
+
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Юр. адрес: улица, дом, офис",
+"Description" => "Пример: ул.Кошкина, д.15, о.4",
+"LangVar" => "pAddressU",
+
+"Name" => "pAddressU",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Юр. адрес: город",
+"Description" => "Пример: г.Москва",
+"LangVar" => "pCityU",
+
+"Name" => "pCityU",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Юр. адрес: индекс",
+"Description" => "Пример: 123456",
+"LangVar" => "pIndexU",
+
+"Name" => "pIndexU",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Юр. адрес: регион/область/край/республика",
+"Description" => "Пример: Московская область",
+"LangVar" => "pStateU",
+
+"Name" => "pStateU",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => false,
+);
+
+
+
+
+
+
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Почтовый адрес: улица, дом, офис",
+"Description" => "Пример: ул.Кошкина, д.15, о.4",
+"LangVar" => "pAddressU2",
+
+"Name" => "pAddressU2",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Почтовый адрес: город",
+"Description" => "Пример: г.Москва",
+"LangVar" => "pCityU2",
+
+"Name" => "pCityU2",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Почтовый адрес: индекс",
+"Description" => "Пример: 123456",
+"LangVar" => "pIndexU2",
+
+"Name" => "pIndexU2",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => true,
+);
+$additionaldomainfields[".ru"][] = array(
+"DisplayName" => "Почтовый адрес: регион/область/край/республика",
+"Description" => "Пример: Московская область",
+"LangVar" => "pStateU2",
+
+"Name" => "pStateU2",
+"Type" => "text",
+"Size" => "50",
+"Default" => "",
+"Required" => false,
+);
+
+
+
+$additionaldomainfields[".su"] = $additionaldomainfields[".ru"];
+$additionaldomainfields[".рф"] = $additionaldomainfields[".ru"];
+
+
